@@ -1,11 +1,8 @@
 Modelo Padrão de Cenário de Testes
-
 1. Introdução
-
 Este documento descreve os cenários de teste para a aplicação em questão. Os testes incluem testes unitários, testes de usabilidade e testes de performance, cada um com seus respectivos itens de execução e validação.
 
 2. Testes a serem desenvolvidos
-
 Os seguintes testes serão desenvolvidos:
 
 Teste Unitário
@@ -33,11 +30,8 @@ Teste de Recuperação
 Teste de Aceitação
 
 3. Cenários de Teste
-
 3.1. Teste Unitário
-
 Objetivo:
-
 Verificar se cada módulo/função da aplicação está funcionando corretamente.
 
 Itens de Execução:
@@ -57,9 +51,7 @@ O teste não deve gerar erros inesperados.
 Cobertura mínima de 80% do código-fonte.
 
 3.2. Teste de Usabilidade
-
 Objetivo:
-
 Avaliar a facilidade de uso, a experiência do usuário e a acessibilidade da interface.
 
 Itens de Execução:
@@ -79,9 +71,7 @@ Usuários devem relatar facilidade na interação com o sistema.
 O design deve ser responsivo e acessível.
 
 3.3. Teste de Performance
-
 Objetivo:
-
 Avaliar o tempo de resposta, a escalabilidade e o consumo de recursos da aplicação.
 
 Itens de Execução:
@@ -101,9 +91,7 @@ O sistema deve suportar "Y" usuários simultâneos sem degradação.
 O consumo de recursos deve ser aceitável dentro dos padrões estabelecidos.
 
 3.4. Teste de Integração
-
 Objetivo:
-
 Avaliar a interação entre os diferentes módulos do sistema.
 
 Itens de Execução:
@@ -121,9 +109,7 @@ Os dados devem ser corretamente transmitidos entre os componentes.
 Nenhum erro inesperado deve ocorrer.
 
 3.5. Teste de Regressão
-
 Objetivo:
-
 Garantir que novas mudanças não afetem funcionalidades existentes.
 
 Itens de Execução:
@@ -137,9 +123,7 @@ Critérios de Validação:
 Nenhuma funcionalidade existente deve ser impactada.
 
 3.6. Teste de Compatibilidade
-
 Objetivo:
-
 Verificar o funcionamento do sistema em diferentes ambientes.
 
 Itens de Execução:
@@ -153,9 +137,7 @@ Critérios de Validação:
 O sistema deve ser funcional em todas as plataformas definidas.
 
 3.7. Teste de Segurança
-
 Objetivo:
-
 Garantir a proteção contra ataques e vulnerabilidades.
 
 Itens de Execução:
@@ -169,36 +151,105 @@ Critérios de Validação:
 Nenhuma vulnerabilidade crítica deve ser encontrada.
 
 3.8. Teste de Estresse
-
 Objetivo:
-
 Avaliar a estabilidade do sistema sob condições extremas.
 
+Itens de Execução:
+
+Simular um número de requisições muito acima do uso normal.
+
+Monitorar o comportamento do sistema em situações de uso contínuo ou prolongado.
+
+Forçar uso máximo de recursos (CPU, memória, disco).
+
+Critérios de Validação:
+
+O sistema deve permanecer funcional mesmo com degradação de performance.
+
+Não deve haver perda de dados ou corrompimento de informações.
+
+O sistema deve registrar corretamente os erros e se recuperar automaticamente, se aplicável.
+
 3.9. Teste de Carga
-
 Objetivo:
-
 Verificar o desempenho do sistema sob alto volume de usuários.
 
+Itens de Execução:
+
+Simular múltiplos acessos simultâneos em cenários reais de uso.
+
+Aumentar progressivamente o número de usuários até atingir o limite planejado.
+
+Medir o tempo de resposta e uso de recursos.
+
+Critérios de Validação:
+
+O sistema deve manter um tempo de resposta aceitável (ex.: abaixo de 2 segundos).
+
+Nenhuma funcionalidade essencial deve falhar durante o pico de uso.
+
+O consumo de recursos deve ser proporcional à carga e dentro dos limites esperados.
+
 3.10. Teste de Volume
-
 Objetivo:
-
 Avaliar o comportamento do sistema com grandes quantidades de dados.
 
+Itens de Execução:
+
+Popular o banco de dados com volumes massivos de registros.
+
+Realizar operações como busca, filtro, ordenação e exportação com os dados em massa.
+
+Avaliar tempo de resposta e estabilidade.
+
+Critérios de Validação:
+
+O sistema deve manter a integridade e performance com grandes volumes de dados.
+
+Todas as operações devem ser concluídas com sucesso, mesmo que com leve degradação.
+
+Não deve ocorrer falha de memória ou travamento.
+
 3.11. Teste de Recuperação
-
 Objetivo:
-
 Testar a capacidade do sistema de se recuperar de falhas.
 
+Itens de Execução:
+
+Simular falhas como queda de energia, perda de conexão ou falhas de hardware.
+
+Interromper serviços e reiniciar para avaliar consistência dos dados.
+
+Testar backup e restore do sistema.
+
+Critérios de Validação:
+
+O sistema deve restaurar seu funcionamento com mínima perda de dados.
+
+Os dados devem ser recuperados corretamente a partir de backups.
+
+Logs de erro devem estar disponíveis para análise técnica.
+
 3.12. Teste de Aceitação
-
 Objetivo:
-
 Validar se o sistema atende aos requisitos dos usuários.
 
-4. Conclusão
+Itens de Execução:
 
+Realizar testes baseados em casos de uso reais com participação dos usuários finais.
+
+Validar funcionalidades contra os requisitos levantados inicialmente.
+
+Coletar feedback direto dos stakeholders.
+
+Critérios de Validação:
+
+Os usuários devem confirmar que os requisitos foram atendidos com sucesso.
+
+Todas as funcionalidades críticas devem funcionar conforme o esperado.
+
+O sistema deve estar pronto para liberação após aprovação.
+
+4. Conclusão
 Este documento estabelece um padrão para a execução dos testes da aplicação, garantindo a qualidade, usabilidade e performance desejadas. A execução dos testes deverá ser realizada conforme os critérios estabelecidos.
 
