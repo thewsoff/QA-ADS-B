@@ -1,1 +1,189 @@
+Roteiro de Testes + Bug Report
+1. Introdução
+Este documento tem como objetivo detalhar os roteiros de execução dos testes definidos no documento de Cenários de Teste, além de fornecer uma estrutura padrão para o registro de falhas encontradas (Bug Report). Cada teste possui um ID único e um conjunto de instruções claras para execução e validação.
+
+2. Roteiros de Teste
+Teste 01 – Teste Unitário
+Objetivo: Validar se funções individuais da aplicação operam corretamente.
+
+Passos:
+
+Acesse o repositório do projeto.
+
+Execute a suíte de testes unitários via terminal: npm run test (ou equivalente).
+
+Verifique a saída de cada função testada.
+
+Confirme os valores retornados conforme esperado.
+
+Verifique o relatório de cobertura de código.
+
+Teste 02 – Teste de Usabilidade
+Objetivo: Avaliar a experiência do usuário.
+
+Passos:
+
+Acesse o sistema em um navegador atualizado.
+
+Realize as tarefas principais (ex: login, cadastro, busca).
+
+Cronometre o tempo gasto em cada tarefa.
+
+Registre a reação e feedback de usuários reais (ou simulações).
+
+Avalie a navegação e disposição dos elementos.
+
+Teste 03 – Teste de Performance
+Objetivo: Verificar tempo de resposta e uso de recursos.
+
+Passos:
+
+Utilize a ferramenta JMeter ou similar.
+
+Configure 50, 100, 500 usuários simultâneos.
+
+Inicie os testes nas páginas principais (login, dashboard).
+
+Monitore tempo de resposta, CPU e memória.
+
+Gere relatórios com os resultados.
+
+Teste 04 – Teste de Integração
+Objetivo: Testar comunicação entre módulos.
+
+Passos:
+
+Acesse o sistema completo (backend + frontend).
+
+Envie uma requisição de cadastro de usuário.
+
+Confirme a criação no banco de dados.
+
+Teste integração com API externa (se houver).
+
+Verifique se os módulos estão se comunicando sem falhas.
+
+Teste 05 – Teste de Regressão
+Objetivo: Garantir que novas alterações não quebrem o sistema.
+
+Passos:
+
+Liste todos os testes anteriores.
+
+Reexecute todos eles após mudanças recentes.
+
+Compare resultados antigos vs atuais.
+
+Marque regressões em funcionalidades que falharam.
+
+Teste 06 – Teste de Compatibilidade
+Objetivo: Verificar funcionamento em diferentes ambientes.
+
+Passos:
+
+Acesse o sistema em: Chrome, Firefox, Safari.
+
+Teste em: Android, iOS, Windows.
+
+Valide visualização e funcionamento dos botões e inputs.
+
+Registre falhas por dispositivo.
+
+Teste 07 – Teste de Segurança
+Objetivo: Identificar vulnerabilidades.
+
+Passos:
+
+Tente acessar rotas protegidas sem autenticação.
+
+Teste ataques comuns: SQL Injection, XSS.
+
+Verifique força da senha e criptografia de dados.
+
+Registre qualquer comportamento inseguro.
+
+Teste 08 – Teste de Estresse
+Objetivo: Avaliar estabilidade sob uso extremo.
+
+Passos:
+
+Utilize ferramenta de estresse (Artillery, Locust).
+
+Aumente requisições até travar ou degradar performance.
+
+Registre tempo de queda e recuperação.
+
+Monitore comportamento do sistema e do banco.
+
+Teste 09 – Teste de Carga
+Objetivo: Medir desempenho sob volume previsto de usuários.
+
+Passos:
+
+Simule o número médio esperado de usuários (ex.: 100).
+
+Realize ações simultâneas em massa.
+
+Avalie tempo de resposta e erros 500.
+
+Gere gráfico de desempenho.
+
+Teste 10 – Teste de Volume
+Objetivo: Avaliar comportamento com dados em massa.
+
+Passos:
+
+Popule o banco com +1 milhão de registros.
+
+Realize pesquisas e filtros com esses dados.
+
+Registre tempo de resposta.
+
+Observe se há travamentos.
+
+Teste 11 – Teste de Recuperação
+Objetivo: Verificar como o sistema reage a falhas.
+
+Passos:
+
+Derrube manualmente o servidor.
+
+Restaure backup completo do sistema.
+
+Acesse logs de erro.
+
+Confirme a integridade dos dados recuperados.
+
+Teste 12 – Teste de Aceitação
+Objetivo: Validar que o sistema atende aos requisitos do cliente.
+
+Passos:
+
+Acompanhe a execução do sistema por um usuário final.
+
+Siga um roteiro baseado nos requisitos levantados.
+
+Confirme o sucesso de todas as funcionalidades.
+
+Registre observações e aprovações dos usuários.
+
+3. Bug Report (Modelo para Preenchimento)
+Use o modelo abaixo para cada bug encontrado durante a execução dos testes:
+
+yaml
+Copiar
+Editar
+Bug: [Ex: O botão de salvar não responde após clicar]
+Reproduzido em: [Navegador Chrome v124.0 | Ambiente: Produção | Data: 09/04/2025]
+Passos para reproduzir:
+  1. Acesse o formulário de cadastro
+  2. Preencha os campos obrigatórios
+  3. Clique no botão "Salvar"
+  4. Observe que nada acontece
+
+Resultado Esperado:
+  O sistema deveria salvar os dados e exibir a mensagem "Cadastro realizado com sucesso"
+
+Resultado Obtido:
+  Nenhuma ação é executada e o botão fica inativo
 
